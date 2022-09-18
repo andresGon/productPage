@@ -100,16 +100,21 @@ header{
   &-wrapImg{
     margin: 0;
   }
+  &-brand{
+    margin: 0;
+    color: $mainColor;
+  }
   &-name{
     font-size: 28px;
     font-weight: 700;
     color: #181C25;
-    margin: 7px 0;
+    margin:0;
   }
   &-description{
     font-size: 14px;
     font-weight: 400;
     color: #86878D;
+    margin: 0;
   }
   &-rowUpPrice{
     display: flex;
@@ -118,10 +123,54 @@ header{
   &-price{
     font-weight: 700;
     font-size: 28px;
+    margin: 0 7px 0 0;
   }
   &-discount{
-    font-size: 10px;
+    font-size: 12px;
     color: $mainColor;
-    background:#FFC092;
+    background:#f9e1d1;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: 700;
   }
+  &-oldPrice{
+    color: #86878D;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+  &-wrapBtn{
+    display: flex;
+  }
+  &-btn{
+    background: $mainColor;
+    border: none;
+    display: flex;
+    color: #fff;
+    padding: 14px 49px;
+    border-radius: 7px;
+    gap: 14px;
+    span{
+      font-weight: 700;
+    }
+  }
+  &-wrapQuantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 14px 0 0;
+    background: #F7F8FD;
+    border-radius: 3px;
+    width: 100px;
+    button{
+      border: none;
+      background: none;
+      width: 30px;
+      height: 30px;
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 28px;
+    }
+  }
+
 }
