@@ -1,0 +1,127 @@
+@import "../node_modules/initialize-css/dist/initialize";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+/* ====== var ======== */
+
+
+$mainColor: #FF551F;
+
+
+body,html{
+  font-family: 'Roboto', sans-serif;
+}
+.wrap-main{
+  margin: auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+header{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.header{
+  &-colLogo{
+    display: flex;
+    align-items: center;
+  }
+  &-colData{
+    display: flex;
+    align-items: center;
+  }
+  &-cartBtn{
+    width: 23px;
+    height: 23px;
+    margin: 0  14px 0 0;
+  }
+  &-userWrap{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+/* ===== menu ==== */
+.menu{
+  &-wrap{
+    display: flex;
+    margin: 0 0 0 42px;
+  }
+  &-btn{
+    background: none;
+    border: none;
+    padding: 28px 0px;
+    margin: 0 14px;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    font-family: 'Roboto', sans-serif;
+    color: #7E8285;
+    transition: .3s;
+    &.active{
+      border-bottom: 4px solid $mainColor;
+    }
+    &:hover{
+      border-bottom: 4px solid $mainColor;
+      color: #2E2E30;
+      font-weight: 700;
+    }
+  }
+}
+
+/* =============== informacion producto ========== */
+
+
+.wrapInfo{
+  &-wrap{
+    display: flex;
+    gap: 6%;
+    margin: 42px 0;
+    img{
+      max-width: 100%;
+    }
+  }
+  &-col{
+    width: 50%;
+    &:nth-child(1){
+      width: 38%;
+    }
+    &:nth-child(2){
+      width: 40%;
+    }
+  }
+}
+
+.product{
+  &-wrapImg{
+    margin: 0;
+  }
+  &-name{
+    font-size: 28px;
+    font-weight: 700;
+    color: #181C25;
+    margin: 7px 0;
+  }
+  &-description{
+    font-size: 14px;
+    font-weight: 400;
+    color: #86878D;
+  }
+  &-rowUpPrice{
+    display: flex;
+    align-items: center;
+  }
+  &-price{
+    font-weight: 700;
+    font-size: 28px;
+  }
+  &-discount{
+    font-size: 10px;
+    color: $mainColor;
+    background:#FFC092;
+  }
+}
