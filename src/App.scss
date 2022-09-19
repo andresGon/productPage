@@ -99,6 +99,40 @@ header{
 .product{
   &-wrapImg{
     margin: 0;
+    overflow: hidden;
+    border-radius: 7px;
+    img{
+      display: block;
+    }
+  }
+  &-rowThumbnail{
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0 0 0;
+  }
+  &-thumbnail{
+    width: 88px;
+    height: 88px;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: .3s;
+    img{
+      display: block;
+    }
+    &:hover{
+      border: 1px solid $mainColor;
+      img{
+        opacity: .6;
+      }
+    }
+    &.active{
+      border: 1px solid $mainColor;
+      img{
+        opacity: .6;
+      }
+    }
   }
   &-brand{
     margin: 0;
@@ -170,6 +204,8 @@ header{
       color: $mainColor;
       font-weight: 700;
       font-size: 28px;
+      line-height: 30px;
+      cursor: pointer;
     }
   }
 
