@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "../components/Modal"
 import iconCart from "../assets/icon-cart.svg"
 import img01 from "../assets/image-product-1.jpg"
 import img02 from "../assets/image-product-2.jpg"
@@ -20,7 +21,12 @@ const WrapInfo = () => {
             <div className="wrapInfo-wrap">
                 <div className="wrapInfo-col">
                     <figure className="product-wrapImg">
-                        <img src={img01} />
+                        { (image === 0) ? <><img src={img01}/></> 
+                          : (image === 1) ? <> <img src={img02}/></>
+                          : (image === 2) ? <> <img src={img03}/></>
+                          : (image === 3) ? <> <img src={img04}/></>
+                          : "otro"
+                          }
                     </figure>
 
                     <div className="product-rowThumbnail">
@@ -75,6 +81,8 @@ const WrapInfo = () => {
 
                 </div>
             </div>
+
+            <Modal/>
         </>
     )
 }
